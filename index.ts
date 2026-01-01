@@ -56,8 +56,6 @@ app.get('/', async (req, res) => {
                     'x-api-key': process.env.API_KEY
                 }
             });
-            console.log('Full API response:', results.data);
-            
             const patients: Patient[] = results.data.data || results.data;
             
             if (!Array.isArray(patients)) {
